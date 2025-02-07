@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Medicio Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .enlace-header-no-media {
+      color: white !important;
+    }
+
+    @media screen and (min-width:1140px) {
+      .enlace-header {
+        color: white !important;
+      }
+    }
+  </style>
+  <script>
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('#header');
+      window.enlace = document.querySelectorAll("#enlace-header")
+      const offset = header.offsetTop; // Obtiene la posición inicial del menú
+      if (window.scrollY > offset) {
+        header.style.backgroundColor = 'white';
+        enlace.forEach(a => {
+          if (a) a.classList.remove("enlace-header")
+        });
+      } else {
+        header.style.backgroundColor = 'transparent';
+        enlace.forEach(a => {
+          if (a) a.classList.add("enlace-header")
+        });
+      }
+    });
+  </script>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header fixed-top">
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-end">
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <img src="assets/img/logo.svg" alt="">
+          <!-- Uncomment the line below if you also wish to use a text logo -->
+          <h1 id="enlace-header" class="enlace-header">PsicoBe</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a id="enlace-header" class="enlace-header" href="#hero" class="active">Home</a></li>
+            <li><a id="enlace-header" class="enlace-header" href="#about">About</a></li>
+            <li><a id="enlace-header" class="enlace-header" href="#services">Services</a></li>
+            <li><a id="enlace-header" class="enlace-header" href="#departments">Departments</a></li>
+            <li><a id="enlace-header" class="enlace-header" href="#doctors">Doctors</a></li>
+            <li><a id="enlace-header" class="enlace-header" href="#doctors">Doctors</a></li>
+            <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                    <li><a href="#">Deep Dropdown 3</a></li>
+                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
+              </ul>
+            </li> -->
+            <!-- <li><a href="#contact">Contact</a></li> -->
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <div id="hero-carousel" class="carousel slide carousel-fade vh-100" data-bs-ride="carousel"
+        data-bs-interval="5000">
+        <div class="carousel-item active">
+          <img src="assets/img/hero-carousel/hero-carousel-1.jpg" alt="">
+          <div class="container" style="top: -15rem; color: white;">
+            <h2 class="h1 display-1 text-uppercase fw-bold">BANNER PRINCIPAL</h2>
+            <p class="fs-5">
+              <Caption></Caption>entro de Atencion Psicologica Psicobe
+            </p>
+            <a href="#about" class="btn-get-started text-uppercase">Boton de accion</a>
+          </div>
+        </div>
+        <div class="carousel-item active">
+          <img src="assets/img/hero-carousel/hero-carousel-2.jpg" alt="">
+          <div class="container" style="top: -15rem; color: white;">
+            <h2 class="h1 display-1 text-uppercase fw-bold">ARTE TERAPIA</h2>
+            <p class="fs-5">
+              <Caption></Caption><Embed></Embed>jemplo de Mensaje de banner de Sesiones de arte terapia
+            </p>
+            <a href="#about" class="btn-get-started text-uppercase">Reservar ahora</a>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <ol class="carousel-indicators"></ol>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Featured Services Section -->
+    <!-- <section id="featured-services" class="featured-services section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="fas fa-heartbeat icon"></i></div>
+              <h4><a href="" class="stretched-link">Lorem Ipsum</a></h4>
+              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="fas fa-pills icon"></i></div>
+              <h4><a href="" class="stretched-link">Sed ut perspici</a></h4>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            </div>
+          </div>
+        
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="fas fa-thermometer icon"></i></div>
+              <h4><a href="" class="stretched-link">Magni Dolores</a></h4>
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            </div>
+          </div>
+       
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="fas fa-dna icon"></i></div>
+              <h4><a href="" class="stretched-link">Nemo Enim</a></h4>
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+            </div>
+          </div>
+         
+
+        </div>
+
+      </div>
+
+    </section> -->
+    <!-- /Featured Services Section -->
+    <section class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <!-- Título -->
+          <div class="section-title aos-init aos-animate">
+            <h2 class="mb-4 text-uppercase">Bienestar Integral para Todos</h2>
+          </div>
+
+          <!-- Descripción -->
+          <p class="h4 fw-light mb-5">
+            PsicoBe es un espacio creado con el objetivo de acompañar a cada humano que participa en las sesiones
+            individuales o grupales a lograr el equilibrio psico-social-emocional que desea y espera, logrando la
+            máxima de vivir en BIENESTAR, felicidad y paz. Nos especializamos en psicoterapia para niños, adolescentes,
+            adultos y terapia de pareja.
+          </p>
+        </div>
+      </div>
+
+      <!-- Iconos y características -->
+      <div class="row justify-content-center text-center">
+        <!-- Terapia individual -->
+        <div class="col-md-4 mb-4">
+          <i style="color: var(--accent-color);" class="bi bi-person-heart display-4 mb-3"></i>
+          <h4 class="h3">Terapia Individual</h4>
+          <p class="fw-light">Atención personalizada para lograr tus objetivos emocionales.</p>
+        </div>
+
+        <!-- Terapia grupal -->
+        <div class="col-md-4 mb-4">
+          <i style="color: var(--accent-color);" class="bi bi-people display-4 mb-3"></i>
+          <h4 class="h3">Terapia Grupal</h4>
+          <p class="fw-light">Comparte y crece en un espacio seguro con otras personas.</p>
+        </div>
+
+        <!-- Bienestar emocional -->
+        <div class="col-md-4 mb-4">
+          <i style="color: var(--accent-color);" class="bi bi-emoji-smile display-4 mb-3"></i>
+          <h4 class="h3">Bienestar Emocional</h4>
+          <p class="fw-light">Encuentra equilibrio y paz en tu vida diaria.</p>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="container my-5">
+      <div class="row justify-content-center">
+        <div class="container section-title" data-aos="fade-up">
+          <h2 class="text-center text-uppercase my-5">terapia precencial & online</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-4">
+          <div class=" ms-1 p-2">
+            <img src="assets/img/services.jpg" width="100%">
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="mx-1 p-2">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id molestias quod doloremque? Sunt corrupti
+              sint ducimus quasi aliquam culpa. Earum nostrum repellat maxime consectetur aliquid quo itaque quas
+              officia cupiditate sunt voluptatem in vitae assumenda neque necessitatibus, deleniti sapiente provident.
+            </p>
+            <span class="mx-1"><a href="https://chat.whatsapp.com/JswA1DGG1bPKbqpR5zSz3k" target="_blank"><i
+                  class="me-1 bi bi-whatsapp"></i>Whatsapp</a></span>
+            | <span class="mx-1"><a href="https://api.whatsapp.com/send?phone=XXXXXXXXXXXX" target="_blank"><i
+                  class="me-1 bi bi-google"></i>Meet</a></span>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class=" me-1 p-2">
+            <img src="assets/img/services.jpg" width="100%">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="services" class="services section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="text-uppercase">Servicios</h2>
+      </div>
+
+      <div class="container">
+        <div class="row row-gap-4">
+          <div class="col-12 col-lg-6">
+            <div class="card card-hover rounded-0 border-0">
+              <a href="" class="img-container w-100">
+                <img src="assets/img/servicios/servicio-1.jpg" class="rounded-0 card-img-top " alt="...">
+              </a>
+              <div class="card-body">
+                <h5 class="card-title h4 fw-bold">Terapia Adolescente y Adulto</h5>
+                <p class="card-text">PEvaluación, diagnóstico y tratamiento en depresión, trastornos de ansiedad, crisis
+                  vocacionales, duelo, problemas de autoestima, adicciones, rupturas amorosas, entre otras, creemos que
+                  todos necesitamos un guia para avanzar.</p>
+                <a href="#" class="fs-5 fw-bold">Agendar <i class="bi bi-arrow-up-right-circle-fill"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="card card-hover rounded-0 border-0">
+              <a href="" class="img-container w-100">
+                <img src="assets/img/servicios/servicio-1.jpg" class="rounded-0 card-img-top " alt="...">
+              </a>
+              <div class="card-body">
+                <h5 class="card-title h4 fw-bold">Terapia Adolescente y Adulto</h5>
+                <p class="card-text">PEvaluación, diagnóstico y tratamiento en depresión, trastornos de ansiedad, crisis
+                  vocacionales, duelo, problemas de autoestima, adicciones, rupturas amorosas, entre otras, creemos que
+                  todos necesitamos un guia para avanzar.</p>
+                <a href="#" class="fs-5 fw-bold">Agendar <i class="bi bi-arrow-up-right-circle-fill"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="card card-hover rounded-0 border-0">
+              <a href="" class="img-container w-100">
+                <img src="assets/img/servicios/servicio-1.jpg" class="rounded-0 card-img-top " alt="...">
+              </a>
+              <div class="card-body">
+                <h5 class="card-title h4 fw-bold">Terapia Adolescente y Adulto</h5>
+                <p class="card-text">PEvaluación, diagnóstico y tratamiento en depresión, trastornos de ansiedad, crisis
+                  vocacionales, duelo, problemas de autoestima, adicciones, rupturas amorosas, entre otras, creemos que
+                  todos necesitamos un guia para avanzar.</p>
+                <a href="#" class="fs-5 fw-bold">Agendar <i class="bi bi-arrow-up-right-circle-fill"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="card card-hover rounded-0 border-0">
+              <a href="" class="img-container w-100">
+                <img src="assets/img/servicios/servicio-1.jpg" class="rounded-0 card-img-top " alt="...">
+              </a>
+              <div class="card-body">
+                <h5 class="card-title h4 fw-bold">Terapia Adolescente y Adulto</h5>
+                <p class="card-text">PEvaluación, diagnóstico y tratamiento en depresión, trastornos de ansiedad, crisis
+                  vocacionales, duelo, problemas de autoestima, adicciones, rupturas amorosas, entre otras, creemos que
+                  todos necesitamos un guia para avanzar.</p>
+                <a href="#" class="fs-5 fw-bold">Agendar <i class="bi bi-arrow-up-right-circle-fill"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery section">
+      <div class="modal fade modal-xl" id="gallery-modal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <h5 class="modal-title">Eventos y Talleres Galeria</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row row-gap-4">
+                <div class="col-12 col-lg-4 col-xl-3">
+                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-12 col-lg-4 col-xl-3">
+                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-12 col-lg-4 col-xl-3">
+                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-12 col-lg-4 col-xl-3">
+                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-12 col-lg-4 col-xl-3">
+                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-12 col-lg-4 col-xl-3">
+                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-12 col-lg-4 col-xl-3">
+                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-12 col-lg-4 col-xl-3">
+                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-12 col-lg-4 col-xl-3">
+                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-12 col-lg-4 col-xl-3">
+                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-12 col-lg-4 col-xl-3">
+                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-12 col-lg-4 col-xl-3">
+                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+
+        <h2 class="text-uppercase">Eventos y Talleres</h2>
+      </div><!--  End Section Title -->
+      <div class="container mb-5">
+        <div class="row g-5">
+          <div class="col-4 col-lg-3">
+            <div class="card card-hover rounded-0 border-0">
+              <a class="img-container w-100" data-bs-toggle="modal" data-bs-target="#gallery-modal">
+                <img src="assets/img/departments-1.jpg" class="rounded-0 card-img-top " alt="...">
+              </a>
+              <div class="card-body">
+                <!-- <h5 class="card-title h4 fw-bold">Terapia Adolescente y Adulto</h5> -->
+                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui excepturi magni
+                  doloribus nostrum, beatae deserunt asperiores facilis ea culpa molestias!</p>
+                <!-- <a href="#" class="fs-5 fw-bold">Agendar <i class="bi bi-arrow-up-right-circle-fill"></i></a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-4 col-lg-3">
+            <div class="card card-hover rounded-0 border-0">
+              <a class="img-container w-100" data-bs-toggle="modal" data-bs-target="#gallery-modal">
+
+                <img src="assets/img/departments-1.jpg" class="rounded-0 card-img-top " alt="...">
+              </a>
+              <div class="card-body">
+                <!-- <h5 class="card-title h4 fw-bold">Terapia Adolescente y Adulto</h5> -->
+                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui excepturi magni
+                  doloribus nostrum, beatae deserunt asperiores facilis ea culpa molestias!</p>
+                <!-- <a href="#" class="fs-5 fw-bold">Agendar <i class="bi bi-arrow-up-right-circle-fill"></i></a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-4 col-lg-3">
+            <div class="card card-hover rounded-0 border-0">
+              <a class="img-container w-100" data-bs-toggle="modal" data-bs-target="#gallery-modal">
+
+                <img src="assets/img/departments-1.jpg" class="rounded-0 card-img-top " alt="...">
+              </a>
+              <div class="card-body">
+                <!-- <h5 class="card-title h4 fw-bold">Terapia Adolescente y Adulto</h5> -->
+                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui excepturi magni
+                  doloribus nostrum, beatae deserunt asperiores facilis ea culpa molestias!</p>
+                <!-- <a href="#" class="fs-5 fw-bold">Agendar <i class="bi bi-arrow-up-right-circle-fill"></i></a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-4 col-lg-3">
+            <div class="card card-hover rounded-0 border-0">
+              <a class="img-container w-100" data-bs-toggle="modal" data-bs-target="#gallery-modal">
+
+                <img src="assets/img/departments-1.jpg" class="rounded-0 card-img-top " alt="...">
+              </a>
+              <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui excepturi magni
+                  doloribus nostrum, beatae deserunt asperiores facilis ea culpa molestias!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+    </section>
+    <section id="pricing" class="pricing section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="text-uppercase">VALORES</h2>
+      </div>
+      <div class="container">
+        <div class="row gy-3">
+          <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="pricing-item">
+              <p class="fs-5 text-uppercase">TERAPIA ADOLESCENTE Y ADULTO</p>
+              <h4><sup>$</sup>30.000<span></span></h4>
+            </div>
+          </div><!-- End Pricing Item -->
+          <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="pricing-item">
+              <p class="fs-5 text-uppercase">terapia pareja</p>
+              <h4><sup>$</sup>45.000<span></span></h4>
+            </div>
+          </div><!-- End Pricing Item -->
+          <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="pricing-item">
+              <p class="fs-5 text-uppercase">SESIÓN ARTETERAPIA </p>
+              <h4><sup>$</sup>37.000<span></span></h4>
+            </div>
+          </div><!-- End Pricing Item -->
+          <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="pricing-item">
+              <p class="fs-5 text-uppercase">Psicologia organizacional</p>
+              <a href="" class="text-uppercase">Consultanos <i class="bi bi-arrow-up-right-circle-fill"></i></a>
+            </div>
+          </div><!-- End Pricing Item -->
+
+        </div>
+        <!-- Section Title -->
+
+        <div class="row gy-4 w-75 m-auto">
+          <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/img/doctors/doctors-1.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-uppercase display-5 ">perfil profesional</h3>
+            <p class="fst-italic">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore
+              magna aliqua.
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+            </p>
+            <ul>
+              <li>
+                <a href=""><i class="me-1 bi bi-instagram"></i>@psicomariawincar</a>
+              </li>
+              <li>
+                <a href=""><i class="me-1 bi bi-facebook"></i>psico.mariawincar</a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="me-1 bi bi-whatsapp"></i>+569 9589455
+                </a>
+              </li>
+              <li>
+                <a href=""><i class="me-1 bi bi- bi-envelope"></i>psicologamariawincar.m@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /Pricing Section -->
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contacto</h2>
+
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+      </div>
+      <div class="container my-5 py-5">
+        <div class="row">
+          <div class="col-12 col-sm-6">
+            <h3 class="h3">Boletas reembolsables por todas las Isapres y seguros de salud</h3>
+          </div>
+          <div class="col-12 col-sm-6 row">
+            <div class="col-6 col-lg-4">
+              <img width="100%" src="assets/img/logos/idWx-922k8_1738905961221.png" alt="">
+            </div>
+            <div class="col-6 col-lg-4">
+              <img width="100%" src="assets/img/logos/vida-tres-logo.png" alt="">
+            </div>
+            <div class="col-6 col-lg-4">
+              <img width="100%" src="assets/img/logos/logo-cruz-blanca.png" alt="">
+            </div>
+            <div class="col-6 col-lg-4">
+              <img width="100%" src="assets/img/logos/highresolution.png" alt="">
+            </div>
+            <div class="col-6 col-lg-4">
+              <img width="100%" src="assets/img/logos/banmedica-logo.png" alt="">
+            </div>
+            <div class="col-6 col-lg-4">
+              <img width="100%" src="assets/img/logos/logo-colmena.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row row-gap-4 ">
+          <div class="col-12 col-lg-4">
+            <h3><i class="bi me-2 bi-geo-alt"></i>Direcci&oacute;n de la consulta:</h3>
+            <div>
+              <p>AV CONCEPCIÓN, LAS CONDES. A PASOS DE METRO PEDRO DE VALDIVIA</p>
+            </div><!-- End Info Item -->
+          </div>
+          <div class="col-12 col-lg-5">
+            <div>
+              <h3><i class="me-2 bi bi-journal-check"></i>Instrucciones para agendar horas: </h3>
+              <p class="text">Pichar en <b> "reservar hora”</b> allí serás dirigido a whatsapp directo de la secretaria
+                con
+                quien
+                coordinas, o enviar directo al whatsapp</p>
+              <p><a href=""><i class="bi bi-whatsapp"></i>+56 9 9758 9455</a></p>
+            </div>
+          </div>
+          <div class="col-lg-3 row ">
+            <div class="col-6 col-lg-12 d-flex ">
+              <div>
+                <h3><i class="bi me-2 bi-telephone"></i>Call Us</h3>
+                <p>+1 5589 55488 55</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-6 col-lg-12 d-flex">
+              <div>
+                <h3><i class="me-2 bi bi-envelope"></i>Email Us</h3>
+                <p>info@example.com</p>
+              </div>
+            </div><!-- End Info Item -->
+          </div>
+        </div>
+
+      </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper" data-speed="600" data-delay="5000"
+          data-breakpoints="{ &quot;320&quot;: { &quot;slidesPerView&quot;: 1, &quot;spaceBetween&quot;: 40 }, &quot;1200&quot;: { &quot;slidesPerView&quot;: 3, &quot;spaceBetween&quot;: 40 } }">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="shadow testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptas voluptatem qui dolor
+                    accusantium velit quisquam pariatur temporibus expedita facere.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <div class="mx-3" style="display: grid;grid-template-columns: 90px 1fr; place-items: center;">
+                  <img src="assets/img/avtar.png" width="90%" class="" alt="">
+                  <h3 class="display-3 mx-0">Fuente: Doctororalia, 03 de diciembre de 2019. "Ir a Doctoralia"</h3>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="shadow testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptas voluptatem qui dolor
+                    accusantium velit quisquam pariatur temporibus expedita facere.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <div class="mx-3" style="display: grid;grid-template-columns: 90px 1fr; place-items: center;">
+                  <img src="assets/img/avtar.png" width="90%" class="" alt="">
+                  <h3 class="display-3 mx-0">Fuente: Doctororalia, 03 de diciembre de 2019. "Ir a Doctoralia"</h3>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="shadow testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptas voluptatem qui dolor
+                    accusantium velit quisquam pariatur temporibus expedita facere.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <div class="mx-3" style="display: grid;grid-template-columns: 90px 1fr; place-items: center;">
+                  <img src="assets/img/avtar.png" width="90%" class="" alt="">
+                  <h3 class="display-3 mx-0">Fuente: Doctororalia, 03 de diciembre de 2019. "Ir a Doctoralia"</h3>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="shadow testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptas voluptatem qui dolor
+                    accusantium velit quisquam pariatur temporibus expedita facere.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <div class="mx-3" style="display: grid;grid-template-columns: 90px 1fr; place-items: center;">
+                  <img src="assets/img/avtar.png" width="90%" class="" alt="">
+                  <h3 class="display-3 mx-0">Fuente: Doctororalia, 03 de diciembre de 2019. "Ir a Doctoralia"</h3>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="shadow testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptas voluptatem qui dolor
+                    accusantium velit quisquam pariatur temporibus expedita facere.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <div class="mx-3" style="display: grid;grid-template-columns: 90px 1fr; place-items: center;">
+                  <img src="assets/img/avtar.png" width="90%" class="" alt="">
+                  <h3 class="display-3 mx-0">Fuente: Doctororalia, 03 de diciembre de 2019. "Ir a Doctoralia"</h3>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">PsicoBe</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>A108 Adam Street</p>
+            <p>New York, NY 535022</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p><strong>Email:</strong> <span>info@example.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-email"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Hic solutasetp</h4>
+          <ul>
+            <li><a href="#">Molestiae accusamus iure</a></li>
+            <li><a href="#">Excepturi dignissimos</a></li>
+            <li><a href="#">Suscipit distinctio</a></li>
+            <li><a href="#">Dilecta</a></li>
+            <li><a href="#">Sit quas consectetur</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Nobis illum</h4>
+          <ul>
+            <li><a href="#">Ipsam</a></li>
+            <li><a href="#">Laudantium dolorum</a></li>
+            <li><a href="#">Dinera</a></li>
+            <li><a href="#">Trodelas</a></li>
+            <li><a href="#">Flexo</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">PsicoBe</strong> <span>All Rights Reserved</span></p>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
