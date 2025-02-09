@@ -33,26 +33,21 @@
     .enlace-header-no-media {
       color: white !important;
     }
-    .enlace-header {
-      color: white !important;
+    .header {
+      background-color: white;
+    }
+    .bg-transparent { background-color: transparent;}
+    .bg-transparent .enlace-header {
+      color: white;
     }
   </style>
   <script>
     window.addEventListener('scroll', function () {
       const header = document.querySelector('#header');
-      window.enlace = document.querySelectorAll("#enlace-header")
       const offset = header.offsetTop; // Obtiene la posición inicial del menú
-      if (window.scrollY > offset) {
-        header.style.backgroundColor = 'white';
-        enlace.forEach(a => {
-          if (a) a.classList.remove("enlace-header")
-        });
-      } else {
-        header.style.backgroundColor = 'transparent';
-        enlace.forEach(a => {
-          if (a) a.classList.add("enlace-header")
-        });
-      }
+
+      if (window.scrollY > offset) header.classList.remove('bg-transparent');
+      else header.classList.add('bg-transparent');
     });
   </script>
 </head>
@@ -237,7 +232,7 @@
         </div>
       </div>
     </section>
-    <section  class="container my-5">
+    <section class="container my-5">
       <div class="row justify-content-center">
         <div class="container section-title" data-aos="fade-up">
           <h2 class="text-center text-uppercase my-5">terapia precencial & online</h2>
@@ -339,51 +334,37 @@
     <!-- Gallery Section -->
     <section id="eventos-y-talleres" class="gallery section">
       <div class="modal fade modal-xl" id="gallery-modal">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content justify-content-center" style="background-color: transparent;">
             <div class="modal-header border-0">
               <h5 class="modal-title">Eventos y Talleres Galeria</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-              <div class="row row-gap-4">
-                <div class="col-12 col-lg-4 col-xl-3">
-                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
+            <div id="galeria" class="carousel slide">
+              <div class="carousel-inner container">
+                <div class="carousel-item active">
+                  <img src="/assets/img/hero-carousel/hero-carousel-1.jpg"
+                    style="max-height:90vh;width:100%; display: flex; justify-content: center;">
                 </div>
-                <div class="col-12 col-lg-4 col-xl-3">
-                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
+                <div class="carousel-item">
+                  <img src="/assets/img/hero-carousel/hero-carousel-2.jpg"
+                    style="max-height:90vh;width:100%; display: flex; justify-content: center;">
                 </div>
-                <div class="col-12 col-lg-4 col-xl-3">
-                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-12 col-lg-4 col-xl-3">
-                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-12 col-lg-4 col-xl-3">
-                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-12 col-lg-4 col-xl-3">
-                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-12 col-lg-4 col-xl-3">
-                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-12 col-lg-4 col-xl-3">
-                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-12 col-lg-4 col-xl-3">
-                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-12 col-lg-4 col-xl-3">
-                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-12 col-lg-4 col-xl-3">
-                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-12 col-lg-4 col-xl-3">
-                  <img src="/assets/img/about.jpg" class="img-fluid" alt="">
+                <div class="carousel-item">
+                  <img src="/assets/img/hero-carousel/hero-carousel-3.jpg"
+                    style="max-height:90vh;width:100%; display: flex; justify-content: center;">
                 </div>
               </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#galeria"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#galeria"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
           </div>
         </div>
@@ -570,7 +551,8 @@
                 con
                 quien
                 coordinas, o enviar directo al whatsapp</p>
-              <p><a href="https://api.whatsapp.com/send?phone=+56997589455"><i class="bi bi-whatsapp"></i>+56 9 9758 9455</a></p>
+              <p><a href="https://api.whatsapp.com/send?phone=+56997589455"><i class="bi bi-whatsapp"></i>+56 9 9758
+                  9455</a></p>
             </div>
           </div>
           <div class="col-lg-3 row ">
@@ -642,7 +624,8 @@
                     accusantium velit quisquam pariatur temporibus expedita facere.</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
-                <div class="mx-3" style="display: flex;flex-wrap: nowrap;align-items: center;justify-content: center;gap:1rem">
+                <div class="mx-3"
+                  style="display: flex;flex-wrap: nowrap;align-items: center;justify-content: center;gap:1rem">
                   <img src="assets/img/avtar.png" style="width: 100%;max-width: 90px;" class="" alt="">
                   <h3 class="display-3 mx-0">Fuente: Doctororalia, 03 de diciembre de 2019. "Ir a Doctoralia"</h3>
                 </div>
@@ -672,7 +655,8 @@
                     accusantium velit quisquam pariatur temporibus expedita facere.</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
-                <div class="mx-3" style="display: flex;flex-wrap: nowrap;align-items: center;justify-content: center;gap:1rem">
+                <div class="mx-3"
+                  style="display: flex;flex-wrap: nowrap;align-items: center;justify-content: center;gap:1rem">
                   <img src="assets/img/avtar.png" style="width: 100%;max-width: 90px;" class="" alt="">
                   <h3 class="display-3 mx-0">Fuente: Doctororalia, 03 de diciembre de 2019. "Ir a Doctoralia"</h3>
                 </div>
@@ -687,7 +671,8 @@
                     accusantium velit quisquam pariatur temporibus expedita facere.</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
-                <div class="mx-3" style="display: flex;flex-wrap: nowrap;align-items: center;justify-content: center;gap:1rem">
+                <div class="mx-3"
+                  style="display: flex;flex-wrap: nowrap;align-items: center;justify-content: center;gap:1rem">
                   <img src="assets/img/avtar.png" style="width: 100%;max-width: 90px;" class="" alt="">
                   <h3 class="display-3 mx-0">Fuente: Doctororalia, 03 de diciembre de 2019. "Ir a Doctoralia"</h3>
                 </div>
@@ -702,7 +687,8 @@
                     accusantium velit quisquam pariatur temporibus expedita facere.</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
-                <div class="mx-3" style="display: flex;flex-wrap: nowrap;align-items: center;justify-content: center;gap:1rem">
+                <div class="mx-3"
+                  style="display: flex;flex-wrap: nowrap;align-items: center;justify-content: center;gap:1rem">
                   <img src="assets/img/avtar.png" style="width: 100%;max-width: 90px;" class="" alt="">
                   <h3 class="display-3 mx-0">Fuente: Doctororalia, 03 de diciembre de 2019. "Ir a Doctoralia"</h3>
                 </div>
@@ -721,73 +707,73 @@
   <footer id="footer" class="footer light-background">
 
     <div class="container footer-top">
-        <div class="row gy-4">
-            <div class="col-lg-4 col-md-6 footer-about">
-                <a href="index.html" class="logo d-flex align-items-center">
-                    <span class="sitename">PsicoBe</span>
-                </a>
-                <div class="footer-contact pt-3">
-                    <p>AV CONCEPCIÓN, LAS CONDES</p>
-                    <p>A pasos de Metro Pedro de Valdivia</p>
-                    <p class="mt-3"><strong>Teléfono:</strong> <span>+56 9 9758 9455</span></p>
-                    <p><strong>Email:</strong> <span>psicologamariawincar.m@gmail.com</span></p>
-                </div>
-                <div class="social-links d-flex mt-4">
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href="https://api.whatsapp.com/send?phone=+56997589455"><i class="bi bi-whatsapp"></i></a>
-                    <a href=""><i class="bi bi-envelope"></i></a>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-md-3 footer-links">
-                <h4>Enlaces útiles</h4>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#tipo-de-terapia">Tipos de Terapia</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#eventos-y-talleres">Eventos y Talleres</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
-
-            <div class="col-lg-2 col-md-3 footer-links">
-                <h4>Nuestros Servicios</h4>
-                <ul>
-                    <li><a href="#servicios">Terapia Individual</a></li>
-                    <li><a href="#servicios">Terapia de Pareja</a></li>
-                    <li><a href="#servicios">Arteterapia</a></li>
-                    <li><a href="#servicios">Psicología Organizacional</a></li>
-                </ul>
-            </div>
-
-            <div class="col-lg-2 col-md-3 footer-links">
-                <h4>Información</h4>
-                <ul>
-                    <li><a href="#valores">Valores</a></li>
-                    <li><a href="#opiniones">Opiniones</a></li>
-                    <li><a href="#contacto">Boletas Reembolsables</a></li>
-                    <li><a href="#contacto">Política de Privacidad</a></li>
-                </ul>
-            </div>
-
-            <div class="col-lg-2 col-md-3 footer-links">
-                <h4>Contacto</h4>
-                <ul>
-                    <li><a href="https://chat.whatsapp.com/JswA1DGG1bPKbqpR5zSz3k" target="_blank">WhatsApp</a></li>
-                    <li><a href="https://api.whatsapp.com/send?phone=XXXXXXXXXXXX" target="_blank">Google Meet</a></li>
-                    <li><a href="mailto:psicologamariawincar.m@gmail.com">Email</a></li>
-                </ul>
-            </div>
-
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">PsicoBe</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>AV CONCEPCIÓN, LAS CONDES</p>
+            <p>A pasos de Metro Pedro de Valdivia</p>
+            <p class="mt-3"><strong>Teléfono:</strong> <span>+56 9 9758 9455</span></p>
+            <p><strong>Email:</strong> <span>psicologamariawincar.m@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=+56997589455"><i class="bi bi-whatsapp"></i></a>
+            <a href=""><i class="bi bi-envelope"></i></a>
+          </div>
         </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Enlaces útiles</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#tipo-de-terapia">Tipos de Terapia</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#eventos-y-talleres">Eventos y Talleres</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Nuestros Servicios</h4>
+          <ul>
+            <li><a href="#servicios">Terapia Individual</a></li>
+            <li><a href="#servicios">Terapia de Pareja</a></li>
+            <li><a href="#servicios">Arteterapia</a></li>
+            <li><a href="#servicios">Psicología Organizacional</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Información</h4>
+          <ul>
+            <li><a href="#valores">Valores</a></li>
+            <li><a href="#opiniones">Opiniones</a></li>
+            <li><a href="#contacto">Boletas Reembolsables</a></li>
+            <li><a href="#contacto">Política de Privacidad</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://chat.whatsapp.com/JswA1DGG1bPKbqpR5zSz3k" target="_blank">WhatsApp</a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=XXXXXXXXXXXX" target="_blank">Google Meet</a></li>
+            <li><a href="mailto:psicologamariawincar.m@gmail.com">Email</a></li>
+          </ul>
+        </div>
+
+      </div>
     </div>
 
     <div class="container copyright text-center mt-4">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">PsicoBe</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">PsicoBe</strong> <span>All Rights Reserved</span></p>
     </div>
 
-</footer>
+  </footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
